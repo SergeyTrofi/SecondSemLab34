@@ -40,7 +40,7 @@
     <%
         File[] itemList = (File[]) request.getAttribute("folders");
         for (File item : itemList) {
-            String folderImage = "src/images/folder.png"; // Экранирование обратных слэшей
+            String folderImage = "src/images/folder.png";
     %>
     <tr>
         <td><img src="<%= folderImage %>" alt="Folder Icon"/> <%= item.getName() %></td>
