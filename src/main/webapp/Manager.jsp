@@ -54,7 +54,7 @@
     %>
     <tr>
         <td><img src="src\images\file.png" alt="File Icon"/> <%= item.getName() %></td>
-        <td><a href=<%="http://localhost:8080/SecondSemLab346-1.0-SNAPSHOT/Download?path="+ item.getAbsolutePath().replace("\\","/").replace(" ","%20")%>> Скачать </a> </td>
+        <td><a href=<%="http://localhost:8080/SecondSemLab346-1.0-SNAPSHOT7/Download?path="+ item.getAbsolutePath().replace("\\","/").replace(" ","%20")%>> Скачать </a> </td>
         <td><%= item.length()%></td>
         <td><%= new Date(item.lastModified())%></td>
     </tr>
