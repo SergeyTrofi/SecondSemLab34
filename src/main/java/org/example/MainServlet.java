@@ -21,19 +21,10 @@ public class MainServlet extends HttpServlet {
         String password = (String) request.getSession().getAttribute("password");
         String email = (String) request.getSession().getAttribute("email");
 
-        User user = AuthService.GetUser(login, password);
 
-        if(user == null)
-        {
-            if(login!= null)//если незалогинен
-            {
-                AuthService.CreateUser(new User(login, password, email));
-            }
-            else
-            {
-                response.sendRedirect(Utility.RedirectOn(request.getRequestURL().toString(), "/Login"));
-                return;
-            }
+        if (login == null && password == null ) {
+            response.sendRedirect(Utility.RedirectOn(request.getRequestURL().toString(), "/Login"));
+            return;
         }
 
         String currentPath = request.getParameter("path");
